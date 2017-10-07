@@ -18,13 +18,11 @@ public class VieMort : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Caisse")
         {
-            Debug.Log("Caisse");
             FindObjectOfType<SwitchScene>().mourir();
             Destroy(this.gameObject);
         }
         else if (collision.gameObject.tag == "Sortie")
         {
-            Debug.Log("Sortie");
             FindObjectOfType<SwitchScene>().sauver();
         }
     }
