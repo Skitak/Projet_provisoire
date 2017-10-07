@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Telekinesie : MonoBehaviour {
 
+    private bool deplace = false;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -17,6 +19,7 @@ public class Telekinesie : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
+            this.deplace = true;
             this.gameObject.GetComponent<SpriteRenderer>().color = new Color(0,0,0,255);
         }
     }
@@ -24,6 +27,19 @@ public class Telekinesie : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
+        {
+            this.deplace = false;
             this.gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+        }
+            
+    }
+    void OnMouseDrag()
+    {
+        if (deplace)
+        {
+            float horizontalSpeed = 0.2f;
+            float h = horizontalSpeed * Input.GetAxis("Mouse X");
+            transform.Translate(h, 0, 0);
+        }
     }
 }
