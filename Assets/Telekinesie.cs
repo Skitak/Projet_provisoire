@@ -40,7 +40,7 @@ public class Telekinesie : MonoBehaviour {
         if (deplace)
         {
             Rigidbody2D rgb2D = GetComponent<Rigidbody2D>();
-            rgb2D.gravityScale = 0;
+
             Vector3 souris = Input.mousePosition; 
             souris = GetComponent<Transform>().InverseTransformPoint(Camera.main.ScreenToWorldPoint(souris));
 
@@ -54,14 +54,31 @@ public class Telekinesie : MonoBehaviour {
             //déplacer verticalement le cube
             float v =  souris.y;
             
-            Vector2 vect = new Vector2(h,  v);
-            rgb2D.MovePosition(rgb2D.position + vect);
+            
+            if(rgb2D!= null)
+            {
+                Vector2 vect = new Vector2(h, v);
+                rgb2D.gravityScale = 0;
+                rgb2D.MovePosition(rgb2D.position + vect);
+            }else //cas des plateforms
+            {
+                Vector3 vect = new Vector3(0, v,0);
+                GetComponentInParent<Transform>().position = GetComponentInParent<Transform>().position + vect;
+                Debug.Log(GetComponentInParent<Transform>().name);
+            }
+
+
             
         }
     }
     private void OnMouseUpAsButton()
     {
-        GetComponent<Rigidbody2D>().gravityScale = 3;
+        Rigidbody2D rgb2D = GetComponent<Rigidbody2D>();
+        if(rgb2D != null)
+        {
+            rgb2D.gravityScale = 3;
+        }
+
     }
 }
 
