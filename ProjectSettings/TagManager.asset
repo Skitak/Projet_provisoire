@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fire
   - Caisse
+  - Sortie
   layers:
   - Default
   - TransparentFX
