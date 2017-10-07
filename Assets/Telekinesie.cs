@@ -37,9 +37,19 @@ public class Telekinesie : MonoBehaviour {
     {
         if (deplace)
         {
-            float horizontalSpeed = 0.2f;
-            float h = horizontalSpeed * Input.GetAxis("Mouse X");
-            transform.Translate(h, 0, 0);
+
+            float horizontalSpeed = 0.5f;
+            float h = 0;
+            if (!this.transform.parent.name.Equals("Platform_deplacable"))
+            {
+                //déplacer horizontalement le cube
+                 h = horizontalSpeed * Input.GetAxis("Mouse X");
+
+            }
+            //déplacer verticalement le cube
+            float verticalSpeed = 1.0f;
+            float v = verticalSpeed * Input.GetAxis("Mouse Y");
+            GetComponent<Transform>().position = new Vector3(transform.position.x + h, transform.position.y + v, transform.position.z);
         }
     }
 }
