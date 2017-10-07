@@ -45,11 +45,22 @@ public class Telekinesie : MonoBehaviour {
             souris = GetComponent<Transform>().InverseTransformPoint(Camera.main.ScreenToWorldPoint(souris));
 
             float h = 0;
-            if (!this.transform.parent.name.Equals("Platform_deplacable"))
+            if (this.transform.parent != null)
             {
-                //déplacer horizontalement le cube
-                 h =  souris.x;
+                if (this.transform.parent.name.Equals("Platform_deplacable"))
+                {
+                    //déplacer horizontalement le cube
+                    h = 0;
 
+                }
+                else
+                {
+                    h = souris.x;
+                }
+            }
+            else
+            {
+                h = souris.x;
             }
             //déplacer verticalement le cube
             float v =  souris.y;
