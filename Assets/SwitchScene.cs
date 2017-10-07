@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SwitchScene : MonoBehaviour {
 
+    public int nbPersonne;
+    public string sceneSuivante;
+    private int nbVictime =0 ;
+    private int nbSauve = 0;
+    private int score;
 	// Use this for initialization
 	void Start () {
 		
@@ -16,5 +21,25 @@ public class SwitchScene : MonoBehaviour {
         {
             SceneManager.LoadScene("Level_2");
         }
+    }
+
+    private bool finDeLevel()
+    {
+        return nbVictime + nbSauve == nbPersonne;
+    }
+    public void sauver()
+    {
+        score += 1;
+        nbSauve += 1;
+        if(finDeLevel())
+            SceneManager.LoadScene("Level_2");
+    }
+
+    public void mourir()
+    {
+        score -= 1;
+        nbVictime += 1;
+        if (finDeLevel())
+            SceneManager.LoadScene("Level_2");
     }
 }
