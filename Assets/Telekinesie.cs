@@ -64,11 +64,11 @@ public class Telekinesie : MonoBehaviour {
             {
                 h = souris.x;
             }
-                if (Mathf.Abs(initial.x - rgb2D.position.x+h)>5)
+                if (Mathf.Abs(initial.x - rgb2D.position.x+h)>4)
                 {
                     h = 0;
                 }
-                if (Mathf.Abs(initial.y - rgb2D.position.y + v) > 5)
+                if (Mathf.Abs(initial.y - rgb2D.position.y + v) > 4)
                 {
                     v = 0;
                 }
