@@ -21,6 +21,7 @@ public class Telekinesie : MonoBehaviour {
         {
             this.deplace = true;
             this.gameObject.GetComponent<SpriteRenderer>().color = new Color(0,0,0,255);
+
         }
     }
 
@@ -30,6 +31,7 @@ public class Telekinesie : MonoBehaviour {
         {
             this.deplace = false;
             this.gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+
         }
             
     }
@@ -37,19 +39,29 @@ public class Telekinesie : MonoBehaviour {
     {
         if (deplace)
         {
+            Rigidbody2D rgb2D = GetComponent<Rigidbody2D>();
+            rgb2D.gravityScale = 0;
+            Vector3 souris = Input.mousePosition; 
+            souris = GetComponent<Transform>().InverseTransformPoint(Camera.main.ScreenToWorldPoint(souris));
 
-            float horizontalSpeed = 0.5f;
             float h = 0;
             if (!this.transform.parent.name.Equals("Platform_deplacable"))
             {
                 //déplacer horizontalement le cube
-                 h = horizontalSpeed * Input.GetAxis("Mouse X");
+                 h =  souris.x;
 
             }
             //déplacer verticalement le cube
-            float verticalSpeed = 1.0f;
-            float v = verticalSpeed * Input.GetAxis("Mouse Y");
-            GetComponent<Transform>().position = new Vector3(transform.position.x + h, transform.position.y + v, transform.position.z);
+            float v =  souris.y;
+            
+            Vector2 vect = new Vector2(h,  v);
+            rgb2D.MovePosition(rgb2D.position + vect);
+            
         }
     }
+    private void OnMouseUpAsButton()
+    {
+        GetComponent<Rigidbody2D>().gravityScale = 3;
+    }
 }
+
