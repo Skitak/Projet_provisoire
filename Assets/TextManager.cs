@@ -15,8 +15,12 @@ public class TextManager : MonoBehaviour {
 	private bool refresh = true;
 	public String nextScene;
 
+	public AudioClip[] piste;
+	private AudioSource source;
+
 	// Use this for initialization
 	void Start () {
+		source = GetComponent<AudioSource> ();		
 		if (phase == 0) {
 			points = 50;		
 		} else {
@@ -26,8 +30,10 @@ public class TextManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		Debug.Log (theme);
+
 		if (refresh) {
+			source.PlayOneShot (piste[theme], 1);
 			UpdateTextBoxes ();
 		}
 
