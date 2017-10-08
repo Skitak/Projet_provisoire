@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class Telekinesie : MonoBehaviour {
 
     private bool deplace = false;
-
+    private Vector3 initial;
 	// Use this for initialization
 	void Start () {
-		
+        initial = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -48,24 +48,36 @@ public class Telekinesie : MonoBehaviour {
             float h = 0;
             float v = souris.y;
 
-            if (rgb2D != null)
-            {
+           // if (rgb2D != null)
+            //{
                 rgb2D.gravityScale = 0;
-                if (this.transform.name.Equals("Platform"))
+            /* if (this.transform.name.Equals("Platform"))
+             {
+                 Debug.Log("Platform");
+                 h = 0;
+             }
+             else
+             {
+                 h = souris.x;
+             }*/
+            if (!this.transform.name.Equals("Platform"))
+            {
+                h = souris.x;
+            }
+                if (Mathf.Abs(initial.x - rgb2D.position.x+h)>4)
                 {
-                    Debug.Log("Platform");
                     h = 0;
                 }
-                else
+                if (Mathf.Abs(initial.y - rgb2D.position.y + v) > 4)
                 {
-                    h = souris.x;
+                    v = 0;
                 }
-                
-                
+
                 Vector2 vect = new Vector2(h, v);
                 
                 rgb2D.MovePosition(rgb2D.position + vect);
-            }
+
+        //}
           /*  else //cas des plateforms
             {
                 Vector3 vect = new Vector3(0, v, 0);
@@ -81,6 +93,7 @@ public class Telekinesie : MonoBehaviour {
         {
             rgb2D.gravityScale = 3;
         }
+        initial = transform.position;
 
     }
 }
