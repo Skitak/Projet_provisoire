@@ -2543,6 +2543,15 @@ Prefab:
       propertyPath: m_Name
       value: Victime (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 58231947594358974, guid: 97af098746f4a9c438cc0d89ac063fa9,
+        type: 2}
+      propertyPath: m_Radius
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007311909379270, guid: 97af098746f4a9c438cc0d89ac063fa9, type: 2}
+      propertyPath: m_TagString
+      value: Victim
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97af098746f4a9c438cc0d89ac063fa9, type: 2}
   m_IsPrefabParent: 0
@@ -9623,6 +9632,15 @@ Prefab:
       propertyPath: m_Name
       value: Victime (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 58231947594358974, guid: 97af098746f4a9c438cc0d89ac063fa9,
+        type: 2}
+      propertyPath: m_Radius
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007311909379270, guid: 97af098746f4a9c438cc0d89ac063fa9, type: 2}
+      propertyPath: m_TagString
+      value: Victim
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97af098746f4a9c438cc0d89ac063fa9, type: 2}
   m_IsPrefabParent: 0
@@ -13528,6 +13546,10 @@ Prefab:
         type: 2}
       propertyPath: m_Radius
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007311909379270, guid: 97af098746f4a9c438cc0d89ac063fa9, type: 2}
+      propertyPath: m_TagString
+      value: Victim
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97af098746f4a9c438cc0d89ac063fa9, type: 2}
