@@ -16,7 +16,7 @@ public class TextManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		points = 0;
-		phase = 1;
+		phase = 0;
 		theme = 2;
 
 	}
