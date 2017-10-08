@@ -21,7 +21,7 @@ public class Telekinesie : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             this.deplace = true;
-            this.gameObject.GetComponent<SpriteRenderer>().color = new Color(0,0,0,255);
+            this.gameObject.GetComponent<SpriteRenderer>().color = new Color(255,0,0,255);
 
         }
     }
