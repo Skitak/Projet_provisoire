@@ -4,4 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/SessionPsy1.unity
+    guid: 650c1afd2a120f94bb2102908a7ae942
+  - enabled: 1
+    path: Assets/initialisation.unity
+    guid: 63c3cf32a0f9ffa4481565e685a507f0
+  - enabled: 1
+    path: Assets/SessionPsy2.unity
+    guid: d48d6c6aaab232b40ab95153211c967e
+  - enabled: 1
+    path: Assets/Level_2.unity
+    guid: b33e0cf8303df4348a2a1576b3793ac2

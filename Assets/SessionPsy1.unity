@@ -428,6 +428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1490947730}
   - component: {fileID: 1490947732}
+  - component: {fileID: 1490947734}
   - component: {fileID: 1490947731}
   - component: {fileID: 1490947733}
   m_Layer: 5
@@ -504,12 +505,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a14d9f6d991f434f8efcdd215830f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1490947734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1490947729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8b211140ea09847949460f9c50cb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phase: 0
+  theme: 0
   psyBox: {fileID: 15658348}
   heroBox:
   - {fileID: 2085270466}
   - {fileID: 1171605041}
   - {fileID: 1735914495}
   - {fileID: 1452624316}
+  nextScene: initialisation
 --- !u!1 &1644695813
 GameObject:
   m_ObjectHideFlags: 0
