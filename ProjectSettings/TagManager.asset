@@ -8,6 +8,7 @@ TagManager:
   - Caisse
   - Sortie
   - Victim
+  - Desk
   layers:
   - Default
   - TransparentFX
@@ -44,4 +45,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Desk
+    uniqueID: 2447377363
+    locked: 0
+  - name: Carte
+    uniqueID: 3446932419
     locked: 0

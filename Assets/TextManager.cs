@@ -17,7 +17,11 @@ public class TextManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		points = 50;
+		if (phase == 0) {
+			points = 50;		
+		} else {
+			points = PlayerPrefs.GetInt ("Player Score");
+		}
 	}
 	
 	// Update is called once per frame
@@ -42,8 +46,6 @@ public class TextManager : MonoBehaviour {
 	}	
 
 	private void UpdateTextBoxes(){
-		Debug.Log ("phase :" + phase);
-		Debug.Log ("theme : " + theme);
 		psyBox.text = DialogueList.GetText (phase, theme, 0, 0);
 
 		for(int i = 0; i < 4; i++){
@@ -61,16 +63,21 @@ public class TextManager : MonoBehaviour {
 			UpdateStory (3);
 			break;
 		case 2:
-			UpdateStory (4);
+			UpdateStory (2);
 			break;
 		case 3:
-			UpdateStory (2);
+			UpdateStory (1);
+			break;
+		case 4: 
+			UpdateStory (1);
 			break;
 		}
 
 	}
 
 	private void UpdateStory(int nbTheme){
+		points--;
+		Debug.Log ("points : " + points);
 		if (theme < nbTheme) {
 			++theme;
 		} else if (theme == nbTheme) {
