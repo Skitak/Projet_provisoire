@@ -20,7 +20,7 @@ public class Timer_lvl3 : MonoBehaviour {
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0)
         {
-            SceneManager.LoadScene("Level_2");
+            SceneManager.LoadScene("Level_3");
         }
 
     }
