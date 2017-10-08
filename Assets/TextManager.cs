@@ -17,7 +17,7 @@ public class TextManager : MonoBehaviour {
 	void Start () {
 		points = 0;
 		phase = 0;
-		theme = 2;
+		theme = 0;
 
 	}
 	
@@ -25,6 +25,18 @@ public class TextManager : MonoBehaviour {
 	void Update () {
 		if (refresh) {
 			UpdateTextBoxes ();
+		}
+		if(Input.GetButtonDown("up") && (heroBox[0].text != "")){
+			ResponseFeedback (0);
+		}
+		if(Input.GetButtonDown("down") && (heroBox[1].text != "")){
+			ResponseFeedback (1);
+		}
+		if(Input.GetButtonDown("left") && (heroBox[2].text != "")){
+			ResponseFeedback (2);
+		}
+		if(Input.GetButtonDown("right") && (heroBox[3].text != "")){
+			ResponseFeedback (3);
 		}
 	}	
 
@@ -35,5 +47,11 @@ public class TextManager : MonoBehaviour {
 			heroBox[i].text = DialogueList.GetText (phase, theme, 1, i);
 		}
 		refresh = false;
+	}
+
+	private void ResponseFeedback(int heroBoxId){
+		theme += 1;
+		refresh = true;
+
 	}
 }
