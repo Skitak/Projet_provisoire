@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CardHover : MonoBehaviour {
 
-	private static String path = "Assets/Sprites/Cards/carte ";
+	private static String path = "carte ";
 	private static String hoverExtension = " hover";
 	private static int nCards = 9;
 	public Sprite[] cards;
@@ -40,8 +40,6 @@ public class CardHover : MonoBehaviour {
 	}
 
 	private void Load(String path){
-		Debug.Log (path);
-		Debug.Log (counter);
 		if (path.Contains ("hover")) {
 			transform.Find ("Carte " + counter.ToString ()).GetComponent<SpriteRenderer> ().sprite = hoverCards [counter - 2];
 		} else {
