@@ -19,7 +19,7 @@ public class SwitchScene : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene(sceneSuivante);
+            SceneManager.LoadScene("Level_2");
         }
     }
 
@@ -32,7 +32,7 @@ public class SwitchScene : MonoBehaviour {
         score += 1;
         nbSauve += 1;
         if(finDeLevel())
-            SceneManager.LoadScene(sceneSuivante);
+            SceneManager.LoadScene("Level_2");
     }
 
     public void mourir()
@@ -40,6 +40,6 @@ public class SwitchScene : MonoBehaviour {
         score -= 1;
         nbVictime += 1;
         if (finDeLevel())
-			SceneManager.LoadScene(sceneSuivante);
+            SceneManager.LoadScene("Level_2");
     }
 }
