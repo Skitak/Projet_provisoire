@@ -9,7 +9,7 @@ public class SwitchScene : MonoBehaviour {
     public string sceneSuivante;
     private int nbVictime =0 ;
     private int nbSauve = 0;
-    private int score;
+    private int score=0;
 	// Use this for initialization
 	void Start () {
 		
@@ -17,10 +17,10 @@ public class SwitchScene : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.E))
+       /* if (Input.GetKeyDown(KeyCode.E))
         {
             SceneManager.LoadScene("Level_2");
-        }
+        }*/
     }
 
     private bool finDeLevel()
@@ -32,7 +32,10 @@ public class SwitchScene : MonoBehaviour {
         score += 1;
         nbSauve += 1;
         if(finDeLevel())
-            SceneManager.LoadScene("Level_2");
+        {
+            ChangerScene();
+        }
+
     }
 
     public void mourir()
@@ -40,6 +43,17 @@ public class SwitchScene : MonoBehaviour {
         score -= 1;
         nbVictime += 1;
         if (finDeLevel())
-            SceneManager.LoadScene("Level_2");
+        {
+            ChangerScene();
+        }
+            
+    }
+
+    private void ChangerScene()
+    {
+        int scoreActuel = PlayerPrefs.GetInt("Player Score");
+        scoreActuel += score;
+        PlayerPrefs.SetInt("Player Score", scoreActuel);
+        SceneManager.LoadScene(sceneSuivante);
     }
 }
