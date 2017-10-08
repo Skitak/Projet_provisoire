@@ -26,7 +26,6 @@ public class VieMort : MonoBehaviour {
         {
             Debug.Log("Sortie");
             FindObjectOfType<SwitchScene>().sauver();
-            Destroy(this.gameObject);
         }
     }
 }
