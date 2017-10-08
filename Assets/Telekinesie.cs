@@ -89,7 +89,7 @@ public class Telekinesie : MonoBehaviour {
     private void OnMouseUpAsButton()
     {
         Rigidbody2D rgb2D = GetComponent<Rigidbody2D>();
-        if(transform.tag.Equals("Caisse"))
+        if(transform.tag.Equals("Caisse") || transform.tag.Equals("Victim"))
         {
             rgb2D.gravityScale = 3;
         }
