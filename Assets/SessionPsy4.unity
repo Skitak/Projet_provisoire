@@ -1414,7 +1414,9 @@ MonoBehaviour:
   - {fileID: 1236210655}
   - {fileID: 1139384525}
   nextScene: CardScene
-  piste: []
+  piste:
+  - {fileID: 8300000, guid: f1e78bf53f7124a47b37daf68ba62185, type: 3}
+  - {fileID: 8300000, guid: 750abf999291a4640a25ece8981d965d, type: 3}
 --- !u!222 &1720540794
 CanvasRenderer:
   m_ObjectHideFlags: 0
