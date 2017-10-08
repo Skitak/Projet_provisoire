@@ -786,8 +786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00999ddac84a684f97c5bc12f9af4e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nbPersonne: 0
-  sceneSuivante: 
+  nbPersonne: 2
+  sceneSuivante: SessionPsy3
 --- !u!114 &109143063
 MonoBehaviour:
   m_ObjectHideFlags: 0
