@@ -1517,11 +1517,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4659592801635332, guid: 97af098746f4a9c438cc0d89ac063fa9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.0271826
+      value: 20.87
       objectReference: {fileID: 0}
     - target: {fileID: 4659592801635332, guid: 97af098746f4a9c438cc0d89ac063fa9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 11.915207
+      value: 12.35
       objectReference: {fileID: 0}
     - target: {fileID: 4659592801635332, guid: 97af098746f4a9c438cc0d89ac063fa9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3561,7 +3561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00999ddac84a684f97c5bc12f9af4e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nbPersonne: 0
+  nbPersonne: 1
   sceneSuivante: SessionPsy2
 --- !u!114 &745814979
 MonoBehaviour:
