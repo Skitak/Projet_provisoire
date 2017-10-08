@@ -6,26 +6,35 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/CardScene.unity
-    guid: 45be26394734a5741bb30330b9d4eb35
+    path: Assets/SessionPsy1.unity
+    guid: 3485fd1a2e77b384688e47552b2969a0
   - enabled: 1
     path: Assets/initialisation.unity
     guid: 63c3cf32a0f9ffa4481565e685a507f0
   - enabled: 1
-    path: Assets/Level_2.unity
-    guid: b33e0cf8303df4348a2a1576b3793ac2
-  - enabled: 1
-    path: Assets/Level_3.unity
-    guid: a818e49fef21bef43a1d728539c130e9
-  - enabled: 1
-    path: Assets/SessionPsy1.unity
-    guid: 3485fd1a2e77b384688e47552b2969a0
-  - enabled: 1
     path: Assets/SessionPsy2.unity
     guid: d48d6c6aaab232b40ab95153211c967e
+  - enabled: 1
+    path: Assets/Level_2.unity
+    guid: b33e0cf8303df4348a2a1576b3793ac2
   - enabled: 1
     path: Assets/SessionPsy3.unity
     guid: cf18132ce14c7df49bc4f8c39f872798
   - enabled: 1
+    path: Assets/SessionPsyStylo.unity
+    guid: b0d4f44320244b541a9689c552a6aa2f
+  - enabled: 1
     path: Assets/SessionPsy4.unity
     guid: ffb71b17c6d9a734b86efbc9ddd3a4ce
+  - enabled: 1
+    path: Assets/CardScene.unity
+    guid: 45be26394734a5741bb30330b9d4eb35
+  - enabled: 1
+    path: Assets/SessionsPsy5.unity
+    guid: 3e0a3e1b3cb4fc3418450295a0ee2cb2
+  - enabled: 1
+    path: Assets/Level_3.unity
+    guid: a818e49fef21bef43a1d728539c130e9
+  - enabled: 1
+    path: Assets/SessionsPsy6.unity
+    guid: 6be177c9e368bda4f8bf800d4d853f07

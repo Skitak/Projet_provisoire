@@ -1343,7 +1343,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 66e8ec78107b6f043bb2cc50765d4341, type: 3}
   - {fileID: 21300000, guid: 0c19c1a1391c2a5479e1738cca498b12, type: 3}
   - {fileID: 21300000, guid: cc1bacdf5bf7fe34a9376040ccf760ab, type: 3}
-  nextScene: 
+  nextScene: SessionsPsy5
 --- !u!4 &1712907756
 Transform:
   m_ObjectHideFlags: 0
