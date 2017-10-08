@@ -3448,7 +3448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nbPersonne: 3
-  sceneSuivante: SessionPsy5
+  sceneSuivante: SessionPsy6
 --- !u!114 &844654684
 MonoBehaviour:
   m_ObjectHideFlags: 0
