@@ -273,7 +273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af8b211140ea09847949460f9c50cb3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 0
   phase: 2
   theme: 0
   psyBox: {fileID: 228953989}
@@ -282,7 +281,7 @@ MonoBehaviour:
   - {fileID: 859354173}
   - {fileID: 861051583}
   - {fileID: 1778027793}
-  nextScene: CardScene
+  nextScene: SessionPsyStylo
 --- !u!222 &705002493
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -63,12 +63,15 @@ public class TextManager : MonoBehaviour {
 			UpdateStory (3);
 			break;
 		case 2:
-			UpdateStory (2);
+			UpdateStory (0);
 			break;
 		case 3:
 			UpdateStory (1);
 			break;
 		case 4: 
+			UpdateStory (1);
+			break;
+		case 5:
 			UpdateStory (1);
 			break;
 		}
