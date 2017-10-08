@@ -108,6 +108,7 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &114716872
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +596,9 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1446204856
+=======
+--- !u!1 &1233831142
+>>>>>>> d42cd3af2159d966ecb8995038a04b794089960a
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -683,6 +687,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1448986424
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,3 +974,5 @@ RectTransform:
   m_AnchoredPosition: {x: -0.86, y: 179.9}
   m_SizeDelta: {x: 717.12, y: 39.4}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+>>>>>>> d42cd3af2159d966ecb8995038a04b794089960a
