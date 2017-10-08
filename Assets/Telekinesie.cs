@@ -7,9 +7,11 @@ public class Telekinesie : MonoBehaviour {
 
     private bool deplace = false;
     private Vector3 initial;
+    private Rigidbody2D rgb2D;
 	// Use this for initialization
 	void Start () {
         initial = transform.position;
+        rgb2D = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
@@ -34,13 +36,18 @@ public class Telekinesie : MonoBehaviour {
             this.gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
 
         }
-            
+        if (transform.tag.Equals("Caisse") || transform.tag.Equals("Victim"))
+        {
+            rgb2D.gravityScale = 3;
+        }
+        initial = transform.position;
+
     }
     void OnMouseDrag()
     {
         if (deplace)
         {
-            Rigidbody2D rgb2D = GetComponent<Rigidbody2D>();
+           // Rigidbody2D rgb2D = GetComponent<Rigidbody2D>();
 
             Vector3 souris = Input.mousePosition; 
             souris = GetComponent<Transform>().InverseTransformPoint(Camera.main.ScreenToWorldPoint(souris));
